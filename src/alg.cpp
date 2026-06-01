@@ -6,6 +6,7 @@
 #include <cctype>
 #include <string>
 #include <algorithm>
+#include <vector>
 
 void makeTree(BST<std::string>& tree, const char* filename) {
   std::ifstream file(filename);
@@ -18,7 +19,7 @@ void makeTree(BST<std::string>& tree, const char* filename) {
   while (file.get(ch)) {
     if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
       word += tolower(ch);
-      } else {
+    } else {
         if (!word.empty()) {
           tree.insert(word);
           word.clear();
