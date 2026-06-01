@@ -2,10 +2,11 @@
 #include "bst.h"
 
 #include <cctype>
+
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <algorithm>
 #include <vector>
 
 void makeTree(BST<std::string>& tree, const char* filename) {
