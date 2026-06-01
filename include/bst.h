@@ -8,7 +8,7 @@
 
 template<typename T>
 class BST {
-private:
+  private:
   struct Node {
     T data;
     int count;
@@ -25,14 +25,11 @@ private:
       root->count = 1;
       root->left = nullptr;
       root->right = nullptr;
-      }
-    else if (data < root->data) {
+      } else if (data < root->data) {
       root->left = addNode(root->left, data);
-    }
-    else if (data > root->data) {
+    } else if (data > root->data) {
       root->right = addNode(root->right, data);
-    }
-    else {
+    } else {
       root->count++;
     }
     return root;
@@ -66,7 +63,7 @@ private:
     collectNodes(root->right, nodes);
   }
 
-public:
+  public:
   BST() : root(nullptr) {}
   ~BST() { delTree(root); }
 
