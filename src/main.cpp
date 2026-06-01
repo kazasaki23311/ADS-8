@@ -1,5 +1,6 @@
 // Copyright 2021 NNTU-CS
 #include "bst.h"
+
 #include <iostream>
 #include <string>
 
@@ -18,8 +19,7 @@ int main() {
     int count = wordTree.search(word);
     if (count > 0) {
       std::cout << "Word '" << word << "' found " << count << " times" << std::endl;
-    }
-    else {
+    } else {
       std::cout << "Word '" << word << "' NOT found" << std::endl;
     }
   }
